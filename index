@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CredAble+ | Your Passport to Global Credit and Financial Knowledge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+        }
+        .feature-card-link {
+            display: block;
+            height: 100%;
+        }
+        .feature-card-link:hover .feature-card, .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .persona-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(77, 128, 240, 0.4), 0 0 30px rgba(77, 128, 240, 0.2);
+        }
+        /* Modal styles */
+        .modal-backdrop {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">CredAble<span class="text-blue-600">+</span></a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-blue-600" data-key="nav_features">Features</a>
+                <a href="./dashboard.html" class="text-gray-600 hover:text-blue-600" data-key="nav_dashboard">Dashboard</a>
+                <a href="./literacy-hub.html" class="text-gray-600 hover:text-blue-600" data-key="nav_literacy">Literacy Hub</a>
+                <a href="#tech" class="text-gray-600 hover:text-blue-600" data-key="nav_technology">Technology</a>
+                
+                <!-- Language/Region Selector -->
+                <div class="relative">
+                    <select id="language-selector" class="appearance-none bg-gray-100 border border-gray-300 rounded-md py-2 pl-3 pr-8 text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="en-US">🇺🇸 English (US)</option>
+                        <option value="de-DE">🇩🇪 Deutsch (DE)</option>
+                        <option value="es-MX">🇲🇽 Español (MX)</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <a href="#cta" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors" data-key="nav_get_access">Get Early Access</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#features" class="block py-2 text-gray-600 hover:text-blue-600" data-key="nav_features_mobile">Features</a>
+             <a href="./dashboard.html" class="block py-2 text-gray-600 hover:text-blue-600" data-key="nav_dashboard_mobile">Dashboard</a>
+             <a href="./literacy-hub.html" class="block py-2 text-gray-600 hover:text-blue-600" data-key="nav_literacy_mobile">Literacy Hub</a>
+             <a href="#tech" class="block py-2 text-gray-600 hover:text-blue-600" data-key="nav_technology_mobile">Technology</a>
+             <a href="#cta" class="block mt-4 bg-blue-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors" data-key="nav_get_access_mobile">Get Early Access</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="relative text-white py-20 md:py-32">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" data-key="hero_title">Your Passport to Global Credit and Financial Knowledge.</h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8" data-key="hero_subtitle">We're redefining financial identity for the millions who are invisible to the traditional banking system. It's time for a fairer, more inclusive way to access credit and opportunity.</p>
+                <a href="./dashboard.html" class="bg-white text-blue-600 font-bold px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-transform hover:scale-105" data-key="hero_cta">Create Your Passport</a>
+            </div>
+        </section>
+
+        <!-- As Featured In -->
+        <section class="bg-white py-8">
+            <div class="container mx-auto px-6">
+                <p class="text-center text-gray-500 font-medium" data-key="featured_in">IN PARTNERSHIP WITH LEADING INSTITUTIONS</p>
+                <div class="flex justify-center items-center space-x-8 md:space-x-12 mt-4 grayscale opacity-70">
+                    <img src="https://placehold.co/150x50/f0f0f0/cccccc?text=Deutsche+Bank" alt="Deutsche Bank" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50/f0f0f0/cccccc?text=DB';">
+                    <img src="https://placehold.co/150x50/f0f0f0/cccccc?text=TechCrunch" alt="TechCrunch" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50/f0f0f0/cccccc?text=TC';">
+                    <img src="https://placehold.co/150x50/f0f0f0/cccccc?text=Forbes" alt="Forbes" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50/f0f0f0/cccccc?text=Forbes';">
+                    <img src="https://placehold.co/150x50/f0f0f0/cccccc?text=World+Bank" alt="World Bank Group" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50/f0f0f0/cccccc?text=WB';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-key="features_title">A Complete Financial Empowerment Toolkit</h2>
+                    <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto" data-key="features_subtitle">CredAble+ is more than a score. It's an ecosystem of tools designed to build your financial identity and confidence.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1: AltCredit Score -->
+                    <a href="./dashboard.html" class="feature-card-link">
+                        <div class="bg-white p-6 rounded-xl shadow-md transition-all feature-card h-full">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-key="feature1_title">AltCredit Score Engine™</h3>
+                            <p class="text-gray-600" data-key="feature1_desc">Our AI analyzes non-traditional data like rent payments, utility bills, and gig work history to create a fair, forward-looking credit score.</p>
+                        </div>
+                    </a>
+                    <!-- Feature 2: Digital Credit Passport -->
+                     <div class="bg-white p-6 rounded-xl shadow-md transition-all feature-card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-key="feature2_title">Digital Credit Passport</h3>
+                        <p class="text-gray-600" data-key="feature2_desc">A portable, verifiable financial identity that works across borders. Perfect for migrants, freelancers, and digital nomads.</p>
+                    </div>
+                    <!-- Feature 3: AI Financial Coach -->
+                    <div class="bg-white p-6 rounded-xl shadow-md transition-all feature-card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-key="feature3_title">AI Financial Coach</h3>
+                        <p class="text-gray-600" data-key="feature3_desc">Get personalized, 24/7 guidance via chat. Our AI understands your context and helps you make smarter financial decisions.</p>
+                    </div>
+                    <!-- Feature 4: Financial Literacy Hub -->
+                    <a href="./literacy-hub.html" class="feature-card-link">
+                        <div class="bg-white p-6 rounded-xl shadow-md transition-all feature-card h-full">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-100 text-yellow-600 mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-key="feature4_title">Financial Literacy Hub</h3>
+                            <p class="text-gray-600" data-key="feature4_desc">Access gamified, multilingual micro-courses on budgeting, saving, and business planning, tailored to your region and goals.</p>
+                        </div>
+                    </a>
+                     <!-- Feature 5: SME Toolkit -->
+                    <div class="bg-white p-6 rounded-xl shadow-md transition-all feature-card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-key="feature5_title">SME Toolkit</h3>
+                        <p class="text-gray-600" data-key="feature5_desc">For small business owners, we offer tools for budget planning, invoice financing suggestions, and AI-prompted funding eligibility.</p>
+                    </div>
+                     <!-- Feature 6: Accessibility First -->
+                    <div class="bg-white p-6 rounded-xl shadow-md transition-all feature-card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-key="feature6_title">Accessibility First</h3>
+                        <p class="text-gray-600" data-key="feature6_desc">Designed for everyone. Our platform includes voice support, clear visual design, and simple navigation for users of all abilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20 bg-white">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-key="howitworks_title">Get Started in 3 Simple Steps</h2>
+                    <p class="text-lg text-gray-600 mt-2" data-key="howitworks_subtitle">Your journey to financial opportunity is easier than you think.</p>
+                </div>
+                <div class="relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200" style="transform: translateY(-50%);"></div>
+                    <div class="grid md:grid-cols-3 gap-12 relative">
+                        <div class="text-center">
+                            <div class="relative mb-4 inline-block">
+                                <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-600 text-white text-2xl font-bold shadow-lg glow-effect">1</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-key="step1_title">Sign Up & Connect</h3>
+                            <p class="text-gray-600" data-key="step1_desc">Create your secure profile and give consent to connect non-traditional data sources with a few taps.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="relative mb-4 inline-block">
+                                <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-600 text-white text-2xl font-bold shadow-lg glow-effect">2</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-key="step2_title">Build Your Passport</h3>
+                            <p class="text-gray-600" data-key="step2_desc">Our engine analyzes your data and generates your AltCredit score, creating your Digital Credit Passport in real-time.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="relative mb-4 inline-block">
+                                <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-600 text-white text-2xl font-bold shadow-lg glow-effect">3</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-key="step3_title">Learn & Unlock</h3>
+                            <p class="text-gray-600" data-key="step3_desc">Engage with the AI Coach and Literacy Hub to improve your score and unlock real financial products from our partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personas Section -->
+        <section id="personas" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-key="personas_title">Built For People Like You</h2>
+                    <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto" data-key="personas_subtitle">We serve a diverse global community, from freelancers in Manila to small business owners in Nairobi.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="persona-card rounded-lg p-6 text-center">
+                        <img src="https://placehold.co/100x100/E2E8F0/4A5568?text=👩‍💻" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Freelancer" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=F';">
+                        <h4 class="font-bold text-lg" data-key="persona1_title">The Freelancer</h4>
+                        <p class="text-gray-500 text-sm mb-2">Latin America & Asia</p>
+                        <p class="text-gray-600" data-key="persona1_desc">Uses their gig work history to build a credit profile and get loans for new equipment.</p>
+                    </div>
+                    <div class="persona-card rounded-lg p-6 text-center">
+                        <img src="https://placehold.co/100x100/E2E8F0/4A5568?text=🌍" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Migrant" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=M';">
+                        <h4 class="font-bold text-lg" data-key="persona2_title">The Migrant</h4>
+                        <p class="text-gray-500 text-sm mb-2">EU & North America</p>
+                        <p class="text-gray-600" data-key="persona2_desc">Carries their financial identity across borders to rent an apartment and get a phone plan.</p>
+                    </div>
+                    <div class="persona-card rounded-lg p-6 text-center">
+                        <img src="https://placehold.co/100x100/E2E8F0/4A5568?text=📈" class="w-24 h-24 rounded-full mx-auto mb-4" alt="SME Owner" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=SME';">
+                        <h4 class="font-bold text-lg" data-key="persona3_title">The SME Owner</h4>
+                        <p class="text-gray-500 text-sm mb-2">Africa & SE Asia</p>
+                        <p class="text-gray-600" data-key="persona3_desc">Leverages business data to access micro-loans and expand their local business.</p>
+                    </div>
+                    <div class="persona-card rounded-lg p-6 text-center">
+                        <img src="https://placehold.co/100x100/E2E8F0/4A5568?text=🎓" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Student" onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=GenZ';">
+                        <h4 class="font-bold text-lg" data-key="persona4_title">The Gen Z Student</h4>
+                        <p class="text-gray-500 text-sm mb-2">Global</p>
+                        <p class="text-gray-600" data-key="persona4_desc">Starts their financial journey on the right foot, building a positive financial identity before they graduate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-key="tech_title">Powered by World-Class Technology</h2>
+                    <p class="text-lg text-gray-600 mt-2" data-key="tech_subtitle">We use a secure, scalable, and AI-driven stack to protect your data and deliver powerful insights.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-16 grayscale opacity-75">
+                    <img src="https://placehold.co/150x60/f0f0f0/cccccc?text=Google+Cloud" alt="Google Cloud" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/150x60/f0f0f0/cccccc?text=GCP';">
+                    <img src="https://placehold.co/150x60/f0f0f0/cccccc?text=Microsoft+Azure" alt="Microsoft Azure" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/150x60/f0f0f0/cccccc?text=Azure';">
+                    <img src="https://placehold.co/150x60/f0f0f0/cccccc?text=OpenAI" alt="OpenAI" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/150x60/f0f0f0/cccccc?text=OpenAI';">
+                    <img src="https://placehold.co/150x60/f0f0f0/cccccc?text=Red+Hat+OpenShift" alt="Red Hat OpenShift" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/150x60/f0f0f0/cccccc?text=OpenShift';">
+                    <img src="https://placehold.co/150x60/f0f0f0/cccccc?text=Firebase" alt="Firebase" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/150x60/f0f0f0/cccccc?text=Firebase';">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="hero-gradient">
+            <div class="container mx-auto px-6 py-20 text-center text-white">
+                <div id="cta-content">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-key="cta_title">Ready to Unlock Your Financial Future?</h2>
+                    <p class="text-lg text-gray-200 max-w-2xl mx-auto mb-8" data-key="cta_subtitle">Join the waitlist to be among the first to create your Digital Credit Passport. Be part of a new era of financial inclusion.</p>
+                    <form id="waitlist-form" class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                        <input id="email-input" type="email" placeholder="Enter your email address" class="w-full px-5 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white" required>
+                        <button id="submit-button" type="submit" class="bg-white text-blue-600 font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition-transform hover:scale-105" data-key="cta_button">Get Early Access</button>
+                    </form>
+                </div>
+                 <div id="success-message" class="hidden text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-key="cta_success_title">Thank You! 🎉</h2>
+                    <p class="text-lg text-gray-200 max-w-2xl mx-auto" data-key="cta_success_subtitle">You're on the list! We'll notify you as soon as CredAble+ is available.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold">CredAble<span class="text-blue-400">+</span></h3>
+                    <p class="mt-2 text-gray-400" data-key="footer_tagline">Beyond Scores. Toward Opportunity.</p>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 CredAble+. All rights reserved. A Hackathon Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for notifications -->
+    <div id="notification-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 modal-backdrop opacity-0 pointer-events-none">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm text-center modal-content scale-95">
+            <h3 id="modal-title" class="text-xl font-bold mb-2"></h3>
+            <p id="modal-message" class="text-gray-600 mb-4"></p>
+            <button id="modal-close-button" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors">Close</button>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : { apiKey: "DEMO", authDomain: "DEMO", projectId: "DEMO" };
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'credable-plus-demo';
+
+        let app, auth, db;
+        try {
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+        } catch (e) {
+            console.error("Error initializing Firebase:", e);
+        }
+
+        (async () => {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Authentication failed:", error);
+            }
+        })();
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const waitlistForm = document.getElementById('waitlist-form');
+        const emailInput = document.getElementById('email-input');
+        const submitButton = document.getElementById('submit-button');
+        const ctaContent = document.getElementById('cta-content');
+        const successMessage = document.getElementById('success-message');
+        const modal = document.getElementById('notification-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalCloseButton = document.getElementById('modal-close-button');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        waitlistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!db) {
+                showModal("Error", "Database connection is not available.");
+                return;
+            }
+            const email = emailInput.value.trim();
+            if (!email) {
+                showModal("Invalid Input", "Please enter a valid email address.");
+                return;
+            }
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            try {
+                const collectionPath = `/artifacts/${appId}/public/data/waitlistSignups`;
+                const waitlistCollection = collection(db, collectionPath);
+                await addDoc(waitlistCollection, {
+                    email: email,
+                    submittedAt: serverTimestamp()
+                });
+                ctaContent.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                showModal("Submission Error", "Something went wrong. Please try again.");
+                submitButton.disabled = false;
+                submitButton.textContent = 'Get Early Access';
+            }
+        });
+
+        modalCloseButton.addEventListener('click', hideModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) hideModal();
+        });
+
+        function showModal(title, message) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.querySelector('.modal-content').classList.remove('scale-95');
+        }
+
+        function hideModal() {
+            modal.classList.add('opacity-0');
+            modal.querySelector('.modal-content').classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('pointer-events-none');
+            }, 300);
+        }
+        
+        // --- Language and Localization ---
+        const translations = {
+            'en-US': {
+                nav_features: 'Features', nav_dashboard: 'Dashboard', nav_literacy: 'Literacy Hub', nav_technology: 'Technology', nav_get_access: 'Get Early Access',
+                nav_features_mobile: 'Features', nav_dashboard_mobile: 'Dashboard', nav_literacy_mobile: 'Literacy Hub', nav_technology_mobile: 'Technology', nav_get_access_mobile: 'Get Early Access',
+                hero_title: 'Your Passport to Global Credit and Financial Knowledge.',
+                hero_subtitle: "We're redefining financial identity for the millions who are invisible to the traditional banking system. It's time for a fairer, more inclusive way to access credit and opportunity.",
+                hero_cta: 'Create Your Passport',
+                featured_in: 'IN PARTNERSHIP WITH LEADING INSTITUTIONS',
+                features_title: 'A Complete Financial Empowerment Toolkit',
+                features_subtitle: "CredAble+ is more than a score. It's an ecosystem of tools designed to build your financial identity and confidence.",
+                feature1_title: 'AltCredit Score Engine™',
+                feature1_desc: 'Our AI analyzes non-traditional data like rent payments, utility bills, and gig work history to create a fair, forward-looking credit score.',
+                feature2_title: 'Digital Credit Passport',
+                feature2_desc: 'A portable, verifiable financial identity that works across borders. Perfect for migrants, freelancers, and digital nomads.',
+                feature3_title: 'AI Financial Coach',
+                feature3_desc: 'Get personalized, 24/7 guidance via chat. Our AI understands your context and helps you make smarter financial decisions.',
+                feature4_title: 'Financial Literacy Hub',
+                feature4_desc: 'Access gamified, multilingual micro-courses on budgeting, saving, and business planning, tailored to your region and goals.',
+                feature5_title: 'SME Toolkit',
+                feature5_desc: 'For small business owners, we offer tools for budget planning, invoice financing suggestions, and AI-prompted funding eligibility.',
+                feature6_title: 'Accessibility First',
+                feature6_desc: 'Designed for everyone. Our platform includes voice support, clear visual design, and simple navigation for users of all abilities.',
+                howitworks_title: 'Get Started in 3 Simple Steps',
+                howitworks_subtitle: 'Your journey to financial opportunity is easier than you think.',
+                step1_title: 'Sign Up & Connect',
+                step1_desc: 'Create your secure profile and give consent to connect non-traditional data sources with a few taps.',
+                step2_title: 'Build Your Passport',
+                step2_desc: 'Our engine analyzes your data and generates your AltCredit score, creating your Digital Credit Passport in real-time.',
+                step3_title: 'Learn & Unlock',
+                step3_desc: 'Engage with the AI Coach and Literacy Hub to improve your score and unlock real financial products from our partners.',
+                personas_title: 'Built For People Like You',
+                personas_subtitle: 'We serve a diverse global community, from freelancers in Manila to small business owners in Nairobi.',
+                persona1_title: 'The Freelancer',
+                persona1_desc: 'Uses their gig work history to build a credit profile and get loans for new equipment.',
+                persona2_title: 'The Migrant',
+                persona2_desc: 'Carries their financial identity across borders to rent an apartment and get a phone plan.',
+                persona3_title: 'The SME Owner',
+                persona3_desc: 'Leverages business data to access micro-loans and expand their local business.',
+                persona4_title: 'The Gen Z Student',
+                persona4_desc: 'Starts their financial journey on the right foot, building a positive financial identity before they graduate.',
+                tech_title: 'Powered by World-Class Technology',
+                tech_subtitle: 'We use a secure, scalable, and AI-driven stack to protect your data and deliver powerful insights.',
+                cta_title: 'Ready to Unlock Your Financial Future?',
+                cta_subtitle: "Join the waitlist to be among the first to create your Digital Credit Passport. Be part of a new era of financial inclusion.",
+                cta_button: 'Get Early Access',
+                cta_success_title: 'Thank You! 🎉',
+                cta_success_subtitle: "You're on the list! We'll notify you as soon as CredAble+ is available.",
+                footer_tagline: 'Beyond Scores. Toward Opportunity.'
+            },
+            'de-DE': {
+                nav_features: 'Funktionen', nav_dashboard: 'Dashboard', nav_literacy: 'Lernzentrum', nav_technology: 'Technologie', nav_get_access: 'Frühzugang',
+                nav_features_mobile: 'Funktionen', nav_dashboard_mobile: 'Dashboard', nav_literacy_mobile: 'Lernzentrum', nav_technology_mobile: 'Technologie', nav_get_access_mobile: 'Frühzugang',
+                hero_title: 'Ihr Pass zu globaler Kreditwürdigkeit und Finanzwissen.',
+                hero_subtitle: 'Wir definieren die finanzielle Identität für Millionen neu, die für das traditionelle Bankensystem unsichtbar sind. Es ist Zeit für einen faireren, inklusiveren Zugang zu Krediten und Chancen.',
+                hero_cta: 'Ihren Pass erstellen',
+                featured_in: 'IN PARTNERSCHAFT MIT FÜHRENDEN INSTITUTIONEN',
+                features_title: 'Ein komplettes Toolkit zur finanziellen Stärkung',
+                features_subtitle: 'CredAble+ ist mehr als nur ein Score. Es ist ein Ökosystem von Werkzeugen, das Ihre finanzielle Identität und Ihr Vertrauen stärkt.',
+                feature1_title: 'AltCredit Score Engine™',
+                feature1_desc: 'Unsere KI analysiert nicht-traditionelle Daten wie Mietzahlungen, Stromrechnungen und Gig-Arbeit, um einen fairen, zukunftsorientierten Kredit-Score zu erstellen.',
+                feature2_title: 'Digitaler Kreditpass',
+                feature2_desc: 'Eine portable, überprüfbare finanzielle Identität, die grenzüberschreitend funktioniert. Perfekt für Migranten, Freiberufler und digitale Nomaden.',
+                feature3_title: 'KI-Finanzcoach',
+                feature3_desc: 'Erhalten Sie personalisierte 24/7-Beratung per Chat. Unsere KI versteht Ihren Kontext und hilft Ihnen, klügere Finanzentscheidungen zu treffen.',
+                feature4_title: 'Zentrum für Finanzwissen',
+                feature4_desc: 'Greifen Sie auf spielerische, mehrsprachige Mikrokurse zu Budgetierung, Sparen und Geschäftsplanung zu, die auf Ihre Region und Ziele zugeschnitten sind.',
+                feature5_title: 'KMU-Werkzeugkasten',
+                feature5_desc: 'Für Kleinunternehmer bieten wir Werkzeuge zur Budgetplanung, Vorschläge zur Rechnungsfinanzierung und KI-gestützte Förderungsberechtigung.',
+                feature6_title: 'Barrierefreiheit zuerst',
+                feature6_desc: 'Für jeden konzipiert. Unsere Plattform bietet Sprachunterstützung, klares visuelles Design und einfache Navigation für Benutzer aller Fähigkeiten.',
+                howitworks_title: 'In 3 einfachen Schritten loslegen',
+                howitworks_subtitle: 'Ihr Weg zu finanziellen Möglichkeiten ist einfacher als Sie denken.',
+                step1_title: 'Anmelden & Verbinden',
+                step1_desc: 'Erstellen Sie Ihr sicheres Profil und geben Sie die Zustimmung, nicht-traditionelle Datenquellen mit wenigen Klicks zu verbinden.',
+                step2_title: 'Pass erstellen',
+                step2_desc: 'Unsere Engine analysiert Ihre Daten und generiert Ihren AltCredit-Score, wodurch Ihr digitaler Kreditpass in Echtzeit erstellt wird.',
+                step3_title: 'Lernen & Freischalten',
+                step3_desc: 'Nutzen Sie den KI-Coach und das Lernzentrum, um Ihren Score zu verbessern und echte Finanzprodukte von unseren Partnern freizuschalten.',
+                personas_title: 'Für Menschen wie Sie gemacht',
+                personas_subtitle: 'Wir bedienen eine vielfältige globale Gemeinschaft, von Freiberuflern in Manila bis zu Kleinunternehmern in Nairobi.',
+                persona1_title: 'Der Freiberufler',
+                persona1_desc: 'Nutzt seine Gig-Arbeitshistorie, um ein Kreditprofil zu erstellen und Kredite für neue Ausrüstung zu erhalten.',
+                persona2_title: 'Der Migrant',
+                persona2_desc: 'Trägt seine finanzielle Identität über Grenzen hinweg, um eine Wohnung zu mieten und einen Handyvertrag zu bekommen.',
+                persona3_title: 'Der KMU-Inhaber',
+                persona3_desc: 'Nutzt Geschäftsdaten, um Mikrokredite zu erhalten und sein lokales Geschäft zu erweitern.',
+                persona4_title: 'Der Gen-Z-Student',
+                persona4_desc: 'Beginnt seine finanzielle Reise auf dem richtigen Fuß und baut eine positive finanzielle Identität vor dem Abschluss auf.',
+                tech_title: 'Angetrieben von Weltklasse-Technologie',
+                tech_subtitle: 'Wir verwenden einen sicheren, skalierbaren und KI-gesteuerten Stack, um Ihre Daten zu schützen und leistungsstarke Einblicke zu liefern.',
+                cta_title: 'Bereit, Ihre finanzielle Zukunft freizuschalten?',
+                cta_subtitle: 'Treten Sie der Warteliste bei, um als einer der Ersten Ihren digitalen Kreditpass zu erstellen. Seien Sie Teil einer neuen Ära der finanziellen Inklusion.',
+                cta_button: 'Frühzugang erhalten',
+                cta_success_title: 'Vielen Dank! 🎉',
+                cta_success_subtitle: 'Sie stehen auf der Liste! Wir benachrichtigen Sie, sobald CredAble+ verfügbar ist.',
+                footer_tagline: 'Jenseits von Scores. Hin zu Möglichkeiten.'
+            },
+            'es-MX': {
+                nav_features: 'Características', nav_dashboard: 'Tablero', nav_literacy: 'Centro de Alfabetización', nav_technology: 'Tecnología', nav_get_access: 'Obtener Acceso',
+                nav_features_mobile: 'Características', nav_dashboard_mobile: 'Tablero', nav_literacy_mobile: 'Centro de Alfabetización', nav_technology_mobile: 'Tecnología', nav_get_access_mobile: 'Obtener Acceso',
+                hero_title: 'Tu Pasaporte al Crédito Global y Conocimiento Financiero.',
+                hero_subtitle: 'Estamos redefiniendo la identidad financiera para los millones de personas invisibles para el sistema bancario tradicional. Es hora de un acceso más justo e inclusivo al crédito y a las oportunidades.',
+                hero_cta: 'Crea Tu Pasaporte',
+                featured_in: 'EN ASOCIACIÓN CON INSTITUCIONES LÍDERES',
+                features_title: 'Un Kit Completo de Empoderamiento Financiero',
+                features_subtitle: 'CredAble+ es más que un puntaje. Es un ecosistema de herramientas diseñado para construir tu identidad y confianza financiera.',
+                feature1_title: 'Motor de Puntuación AltCredit™',
+                feature1_desc: 'Nuestra IA analiza datos no tradicionales como pagos de alquiler, facturas de servicios y historial de trabajo temporal para crear un puntaje de crédito justo y prospectivo.',
+                feature2_title: 'Pasaporte de Crédito Digital',
+                feature2_desc: 'Una identidad financiera portátil y verificable que funciona a través de las fronteras. Perfecto para migrantes, freelancers y nómadas digitales.',
+                feature3_title: 'Asesor Financiero de IA',
+                feature3_desc: 'Obtén orientación personalizada 24/7 a través de chat. Nuestra IA entiende tu contexto y te ayuda a tomar decisiones financieras más inteligentes.',
+                feature4_title: 'Centro de Alfabetización Financiera',
+                feature4_desc: 'Accede a microcursos multilingües y gamificados sobre presupuesto, ahorro y planificación empresarial, adaptados a tu región y objetivos.',
+                feature5_title: 'Kit de Herramientas para PyMEs',
+                feature5_desc: 'Para los dueños de pequeñas empresas, ofrecemos herramientas para la planificación de presupuestos, sugerencias de financiamiento de facturas y elegibilidad de financiamiento impulsada por IA.',
+                feature6_title: 'Accesibilidad Primero',
+                feature6_desc: 'Diseñado para todos. Nuestra plataforma incluye soporte de voz, diseño visual claro y navegación simple para usuarios de todas las habilidades.',
+                howitworks_title: 'Comienza en 3 Sencillos Pasos',
+                howitworks_subtitle: 'Tu viaje hacia la oportunidad financiera es más fácil de lo que piensas.',
+                step1_title: 'Regístrate y Conecta',
+                step1_desc: 'Crea tu perfil seguro y da tu consentimiento para conectar fuentes de datos no tradicionales con unos pocos toques.',
+                step2_title: 'Construye tu Pasaporte',
+                step2_desc: 'Nuestro motor analiza tus datos y genera tu puntaje AltCredit, creando tu Pasaporte de Crédito Digital en tiempo real.',
+                step3_title: 'Aprende y Desbloquea',
+                step3_desc: 'Interactúa con el Asesor de IA y el Centro de Alfabetización para mejorar tu puntaje y desbloquear productos financieros reales de nuestros socios.',
+                personas_title: 'Construido para gente como tú',
+                personas_subtitle: 'Servimos a una comunidad global diversa, desde freelancers en Manila hasta dueños de pequeñas empresas en Nairobi.',
+                persona1_title: 'El Freelancer',
+                persona1_desc: 'Usa su historial de trabajo temporal para construir un perfil de crédito y obtener préstamos para nuevo equipo.',
+                persona2_title: 'El Migrante',
+                persona2_desc: 'Lleva su identidad financiera a través de las fronteras para alquilar un apartamento y obtener un plan de telefonía.',
+                persona3_title: 'El Dueño de PyME',
+                persona3_desc: 'Aprovecha los datos de su negocio para acceder a microcréditos y expandir su negocio local.',
+                persona4_title: 'El Estudiante Gen Z',
+                persona4_desc: 'Comienza su viaje financiero con el pie derecho, construyendo una identidad financiera positiva antes de graduarse.',
+                tech_title: 'Impulsado por Tecnología de Clase Mundial',
+                tech_subtitle: 'Utilizamos una pila segura, escalable e impulsada por IA para proteger tus datos y ofrecer información poderosa.',
+                cta_title: '¿Listo para Desbloquear tu Futuro Financiero?',
+                cta_subtitle: 'Únete a la lista de espera para ser de los primeros en crear tu Pasaporte de Crédito Digital. Sé parte de una nueva era de inclusión financiera.',
+                cta_button: 'Obtener Acceso',
+                cta_success_title: '¡Gracias! 🎉',
+                cta_success_subtitle: '¡Estás en la lista! Te notificaremos tan pronto como CredAble+ esté disponible.',
+                footer_tagline: 'Más allá de los puntajes. Hacia la oportunidad.'
+            }
+        };
+
+        const languageSelector = document.getElementById('language-selector');
+        
+        function setLanguage(lang) {
+            const translation = translations[lang];
+            if (!translation) return;
+
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translation[key]) {
+                    element.textContent = translation[key];
+                }
+            });
+
+            languageSelector.value = lang;
+            localStorage.setItem('credable-lang', lang);
+        }
+
+        languageSelector.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        const savedLang = localStorage.getItem('credable-lang') || 'en-US';
+        setLanguage(savedLang);
+
+    </script>
+
+</body>
+</html>
